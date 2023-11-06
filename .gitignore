@@ -1,6 +1,6 @@
 # Ignore everything in the data directory
 data/1kg/*
-data/output_estimates/*
+#data/output_estimates/
 
 # But keep the directory structure
 !data/1kg/.gitkeep
