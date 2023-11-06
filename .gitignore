@@ -1,2 +1,4 @@
 # Ignore everything in the data directory
-data/*
+data/1kg/*
+data/output_estimates/*
+data/test_data/*
