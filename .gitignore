@@ -1,4 +1,12 @@
 # Ignore everything in the data directory
 data/1kg/*
 data/output_estimates/*
-data/test_data/*
+
+# But keep the directory structure
+!data/1kg/.gitkeep
+!data/output_estimates/.gitkeep
+!data/output_estimates/1kg_amr/.gitkeep
+
+# keep a couple of examples
+!data/output_estimates/1kg_amr/_pst_eff_a1_b0.5_phiauto_chr1.txt
+!data/output_estimates/1kg_amr/_pst_eff_a1_b0.5_phiauto_chr22.txt
