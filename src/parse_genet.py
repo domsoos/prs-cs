@@ -78,10 +78,12 @@ def parse_sumstats(ref_dict, vld_dict, sst_file, n_subj):
               set(zip(sst_dict['SNP'], [mapping[aa] for aa in sst_dict['A1']], [mapping[aa] for aa in sst_dict['A2']])) | \
               set(zip(sst_dict['SNP'], [mapping[aa] for aa in sst_dict['A2']], [mapping[aa] for aa in sst_dict['A1']]))
 
-    comm_snp = vld_snp & ref_snp & sst_snp
+    #print(f"Ref Matrix: {ref_snp}\nSummary Statistic Matrix: {sst_dict}\nValidation Matrix: {vld_snp}")
+    comm_snp = ref_snp & sst_snp & vld_snp 
 
     print('... %d common SNPs in the reference, sumstats, and validation set ...' % len(comm_snp))
 
+    print("")
 
     n_sqrt = sp.sqrt(n_subj)
     sst_eff = {}
